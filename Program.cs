@@ -83,7 +83,7 @@ namespace SMC_motor_ConsoleApp_01
             serialPort_SMC_motor.WriteLine("1VA?");
             // read response
             response = serialPort_SMC_motor.ReadLine();
-            // print home search velocity of SMC motor
+            // print velocity of SMC motor
             Console.WriteLine("The velocity of SMC motor is: " + response);
             // Get positioner error and controller state
             serialPort_SMC_motor.WriteLine("1TS");
@@ -125,12 +125,12 @@ namespace SMC_motor_ConsoleApp_01
                     else if (str_length == 9 && controller_state != "1E" && controller_state != "32")
                     {
                         Console.WriteLine("The SMC motor is responding something else.");
-                        break;
+                        continue;
                     }
                     else
                     {
                         Console.WriteLine("The SMC motor is not responding correctly.");
-                        break;
+                        continue;
                     }
                 }
             }
@@ -165,18 +165,18 @@ namespace SMC_motor_ConsoleApp_01
                     else if (str_length == 9 && controller_state != "1E" && controller_state != "32")
                     {
                         Console.WriteLine("The SMC motor is responding something else.");
-                        break;
+                        continue;
                     }
                     else
                     {
                         Console.WriteLine("The SMC motor is not responding correctly.");
-                        break;
+                        continue;
                     }
                 }
             }
             else if (str_length == 9 && controller_state == "0C")
             {
-                Console.WriteLine("NOT REFERENCED from CONFIGURATION. ");
+                Console.WriteLine("NOT REFERENCED from CONFIGURATION.");
                 // execute home search
                 serialPort_SMC_motor.WriteLine("1OR");
                 // print start homing
@@ -205,12 +205,12 @@ namespace SMC_motor_ConsoleApp_01
                     else if (str_length == 9 && controller_state != "1E" && controller_state != "32")
                     {
                         Console.WriteLine("The SMC motor is responding something else.");
-                        break;
+                        continue;
                     }
                     else
                     {
                         Console.WriteLine("The SMC motor is not responding correctly.");
-                        break;
+                        continue;
                     }
                 }
             }
@@ -245,12 +245,12 @@ namespace SMC_motor_ConsoleApp_01
                     else if (str_length == 9 && controller_state != "1E" && controller_state != "32")
                     {
                         Console.WriteLine("The SMC motor is responding something else.");
-                        break;
+                        continue;
                     }
                     else
                     {
                         Console.WriteLine("The SMC motor is not responding correctly.");
-                        break;
+                        continue;
                     }
                 }
             }
@@ -285,12 +285,12 @@ namespace SMC_motor_ConsoleApp_01
                     else if (str_length == 9 && controller_state != "1E" && controller_state != "32")
                     {
                         Console.WriteLine("The SMC motor is responding something else.");
-                        break;
+                        continue;
                     }
                     else
                     {
                         Console.WriteLine("The SMC motor is not responding correctly.");
-                        break;
+                        continue;
                     }
                 }
             }
@@ -325,12 +325,12 @@ namespace SMC_motor_ConsoleApp_01
                     else if (str_length == 9 && controller_state != "1E" && controller_state != "32")
                     {
                         Console.WriteLine("The SMC motor is responding something else.");
-                        break;
+                        continue;
                     }
                     else
                     {
                         Console.WriteLine("The SMC motor is not responding correctly.");
-                        break;
+                        continue;
                     }
                 }
             }
@@ -365,12 +365,12 @@ namespace SMC_motor_ConsoleApp_01
                     else if (str_length == 9 && controller_state != "1E" && controller_state != "32")
                     {
                         Console.WriteLine("The SMC motor is responding something else.");
-                        break;
+                        continue;
                     }
                     else
                     {
                         Console.WriteLine("The SMC motor is not responding correctly.");
-                        break;
+                        continue;
                     }
                 }
             }
@@ -405,12 +405,12 @@ namespace SMC_motor_ConsoleApp_01
                     else if (str_length == 9 && controller_state != "1E" && controller_state != "32")
                     {
                         Console.WriteLine("The SMC motor is responding something else.");
-                        break;
+                        continue;
                     }
                     else
                     {
                         Console.WriteLine("The SMC motor is not responding correctly.");
-                        break;
+                        continue;
                     }
                 }
             }
@@ -446,12 +446,12 @@ namespace SMC_motor_ConsoleApp_01
                     else if (str_length == 9 && controller_state != "28" && controller_state != "33")
                     {
                         Console.WriteLine("The SMC motor is responding something else.");
-                        break;
+                        continue;
                     }
                     else
                     {
                         Console.WriteLine("The SMC motor is not responding correctly.");
-                        break;
+                        continue;
                     }
                 }
             }
